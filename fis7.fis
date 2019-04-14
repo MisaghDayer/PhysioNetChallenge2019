@@ -1,0 +1,30 @@
+[System]
+Name='fis7'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=2
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='in1'
+Range=[0 100]
+NumMFs=2
+MF1='in1cluster1':'gaussmf',[3.53553390593274 0]
+MF2='in1cluster2':'gaussmf',[3.53553390593274 0]
+
+[Output1]
+Name='out1'
+Range=[0 1]
+NumMFs=2
+MF1='out1cluster1':'linear',[0.00328850029917967 0.77808295549987]
+MF2='out1cluster2':'linear',[0 0]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
